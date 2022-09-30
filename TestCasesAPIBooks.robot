@@ -14,3 +14,6 @@ Buscar um livro específico (GET em um livro específico)
     Requisitar o livro 15
     Conferir o status code    200
     Conferir o reason    OK
+
+Cadastrar um novo livro (POST)
+    Cadastrar um novo livro

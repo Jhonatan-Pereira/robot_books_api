@@ -28,6 +28,16 @@ Requisitar o livro ${ID_LIVRO}
     Log     ${RESPOSTA.text}
     Set Test Variable     ${RESPOSTA}
 
+Cadastrar um novo livro
+    ${HEADERS}         Create Dictionary    content-type=application/json
+    ${RESPOSTA}        POST On Session
+    ...     alias=fakeAPI    
+    ...     url=Books
+    ...     data={"ID": 2323,"Title": "teste","Description":"teste","PageCount":200}
+    ...     headers=${HEADERS}
+    Log     ${RESPOSTA.text}
+    Set Test Variable     ${RESPOSTA}
+
 #### Conferências
 Conferir o status code
     [Arguments]    ${STATUSCODE_DESEJADO}
